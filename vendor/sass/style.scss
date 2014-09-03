@@ -1,0 +1,39 @@
+@import "vendor/normalize/normalize";
+@import "vendor/bourbon/bourbon";
+@import "vendor/neat/neat";
+@import "base/base";
+@import "vendor/neat/neat-helpers";
+
+header {
+  text-align: left;
+  padding: 0.5em 1em;
+  background-color: black;
+  .wrapper {
+    h1 {
+      color: white;
+    }
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  margin-bottom: 2em;
+}
+
+.section-wrapper {
+  @include outer-container;
+}
+
+.description-sections {
+
+  h2 {
+    margin-bottom: 0.5em;
+  }
+
+  @include span-columns(12);
+  text-align: left;
+}
+
+footer {
+  @include outer-container;
+  text-align: center
+}

@@ -13,7 +13,7 @@ router.get('/:baseScheme/:baseDomain/data.json', function(req, res) {
 });
 
 router.get('/', function(req,res) {
-  res.render('index', {title: 'combine-data-json-aodp'});
+  res.render('index', {title: 'combine-data-json-aodp', fullUrl: req.protocol + '://' + req.get('host')});
 })
 
 module.exports = router;

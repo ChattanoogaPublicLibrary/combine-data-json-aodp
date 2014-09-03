@@ -1,5 +1,30 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  header 
+    .wrapper
+      h1= title
+  .section-wrapper
+    section.description-sections
+      h2 What is it?
+      p It combines the provided paginated data.json for your ArcGIS Open Data Portal.
+    section.description-sections
+      h2 Why?
+      p The data.json catalog in the ArcGIS Open Data portal is paginated. The standard way for serving data.json for consumption is not to paginate. For folks and services that use data.json in the expected way, a paginated data.json won't work.
+    section.description-sections
+      h2 How do I use it?
+      p
+        pre= fullUrl + '/:schema/:baseUrl/data.json'
+      p 
+        | So if your ArcGIS Open Data Portal was located at:
+        pre http://myportal.mysite.com
+        | You would access data.json via this URL:
+        pre= fullUrl + '/http/myportal.mysite.com/data.json'
+  footer
+    | combine-data-json-aodp is open source from the 
+    a(href='http://chattlibrary.org') Chattanooga Public Library
+    | /
+    a(href='http://openchattanooga.com') Open Chattanooga
+    | . 
+    a(href='https://github.com/ChattanoogaPublicLibrary/combine-data-json-aodp') Fork this project on GitHub
+    | .
